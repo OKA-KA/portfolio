@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "description": "ポートフォリオ",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "yarn vue-cli-service build --target src",
+    "serve": "yarn vue-cli-service serve",
+    "node:update": "yarn run node:update-check && yarn run node:update-install && yarn run init && lerna run node:update",
+    "node:update-check": "npx -p npm-check-updates -c \"ncu\"",
+    "node:update-install": "npx -p npm-check-updates -c \"ncu -u\"",
+    "lint": "yarn eslint"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "core-js": "^3.16.3",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-service": "~4.5.13",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-vue": "^7.17.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

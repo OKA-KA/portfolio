@@ -7,11 +7,9 @@
   },
   "private": true,
   "scripts": {
-    "build": "yarn vue-cli-service build --target src",
+    "build": "yarn vue-cli-service build",
     "serve": "yarn vue-cli-service serve",
-    "node:update": "yarn run node:update-check && yarn run node:update-install && yarn run init && lerna run node:update",
-    "node:update-check": "npx -p npm-check-updates -c \"ncu\"",
-    "node:update-install": "npx -p npm-check-updates -c \"ncu -u\"",
+    "update": "yarn upgrade --latest",
     "lint": "yarn eslint"
   },
   "dependencies": {
